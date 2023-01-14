@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+<%= form_with scope: :user, url: registration_signup_path, method: :get do |form| %>
+  <div>
+    <%= form.label :Username %>&nbsp;
+    <%= form.text_field :username %>
+  </div><br>
+  <div>
+    <%= form.label :password %>&nbsp;&nbsp;
+    <%= form.password_field :password %>
+  </div><br>
+
+  <div class="actions">
+    <%= form.submit "Login",class:'btn btn-secondary' %>
+  </div>
+<% end %>
+
+<!--A div is a container element in HTML that can be used to group elements together, and it is often used to apply CSS styles to those elements-->

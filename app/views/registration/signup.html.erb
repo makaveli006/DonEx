@@ -1,0 +1,37 @@
+<h1>SignUp</h1>
+<!--registration_path is the path helper points to registration#create -->
+
+<%= form_with scope: :user, url: registration_path, method: :post do |form| %>
+   <div>
+    <%= form.label :"First Name" %>
+    <%= form.text_field :first_name %>
+   </div><br>
+
+    <div>
+    <%= form.label :"Last Name" %>
+    <%= form.text_field :last_name %>
+    </div><br>
+
+    <div>
+    <%= form.label :"Email" %>&emsp;&nbsp;&nbsp;&nbsp;
+    <%= form.text_field :email %>
+    </div><br>
+
+    <div>
+    <%= form.label :"Division" %>&nbsp;&nbsp;&nbsp;
+    <%= form.text_field :division %>
+    </div><br>
+
+    <div>
+    <%= form.label :"Status" %>&emsp;&nbsp;&nbsp;&nbsp;
+    <%= form.text_field :status %>
+    </div><br>
+
+  <div>
+    <%= form.label :password %>&nbsp;&nbsp;
+    <%= form.password_field :password %>
+  </div><br>
+  <div class="actions">
+    <%= form.submit "Create User", class: "btn btn-warning" %>
+  </div>
+<% end %>

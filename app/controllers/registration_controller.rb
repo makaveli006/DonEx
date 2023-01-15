@@ -1,6 +1,8 @@
 # Proper controller name for login purposes SessionsController
 class RegistrationController < ApplicationController
+  layout "registration"
   def login
+    render layout: 'loginLayout'
     @user = User.all
   end
 

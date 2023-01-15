@@ -1,4 +1,5 @@
 class DonxController < ApplicationController
+  layout "donx"
   def home
   end
 
